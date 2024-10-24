@@ -35,13 +35,10 @@ public class PipelineStage : Stage
             AcmsDatabase = sharedStack.AirbnbDB,
         });
 
-        // new ApartmentStacks(this, "ApartmentStacks", new ApartmentStacksProps
-        // {
-        //     AirbnbDatabase = sharedStack.AirbnbDB,
-        //     AirbnbGraphqlApi = sharedStack.AirbnbApi,
-        // });
-
-        // sharedStack.AddDependency(bs);
-        // bs.AddDependency(sharedStack);
+        new ApartmentStacks(this, "ApartmentStacks", new ApartmentStacksProps
+        {
+            AirbnbDatabase = sharedStack.AirbnbDB,
+            AirbnbGraphqlApi = sharedStack.AirbnbApi,
+        });
     }
 }
